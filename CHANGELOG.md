@@ -6,7 +6,41 @@ Removed - 删除功能/接口
 Fixed - 修复问题
 Others - 其他 
 -->
-SDK安装指引：[微信小游戏团结引擎转换插件WXSDK](Design/SDKInstaller.md)
+SDK安装指引：[微信小游戏Unity、团结引擎转换插件WXSDK](Design/SDKInstaller.md)
+## 稳定版本
+1. UnityPackage：[下载地址](https://game.weixin.qq.com/cgi-bin/gamewxagwasmsplitwap/getunityplugininfo?download=1)
+2. PackageManager(git URL): https://github.com/wechat-miniprogram/minigame-tuanjie-transform-sdk.git
+
+## 2024-6-25 【预发布】
+PackageManager(git URL): https://github.com/wechat-miniprogram/minigame-tuanjie-transform-sdk.git#pre-v0.1.16
+### Feature
+* 普通：兼容2022新增的音频API
+* 普通：更快的转换打包速度
+* 普通：Unity侧添加设置分辨率接口
+### Fixed
+* 普通：临时兼容wk 17.5暂停音频无法恢复的bug
+* 普通：Touch id在特定情况丢失
+* 普通：使用微信压缩纹理工具sprite atlas版本被修改
+
+## 2024-5-17 【普通更新】
+### Fixed
+* 普通：修复WXAssetBundle与预下载冲突问题
+
+## 2024-5-15 【普通更新】
+### Feature
+* 普通：支持JS构建模板，请查阅[模板文档](https://wechat-miniprogram.github.io/minigame-unity-webgl-transform/Design/BuildTemplate.html)
+* 普通：调整启动封面表现，默认进度动画加速
+* 普通：writeFile/unlink操作文件时同步更新启动插件维护的缓存信息
+* 普通：支持自定义微信系统字体字符集
+* 普通：网络接口如UnityWebRequest支持通过添加特殊请求头`request.SetRequestHeader("wechatminigame-preload", "1")`做预下载，缓存到用户目录但不增加unity内存。当需要使用时不增加请求头重新请求即可从用户目录读取缓存使用。
+* 普通：网络接口如UnityWebRequest支持通过添加特殊请求头`request.SetRequestHeader("wechatminigame-skipclean", "1")`不做旧缓存淘汰。
+* 普通：适配插件版本升级到1.2.50
+  
+## 2024-4-26 【普通更新】
+### Fixed
+* 普通：修复Unity2018/2019的兼容
+* 普通：兼容Windows 1.0.4版本template问题
+* 普通：修复Android平台导出时的
 
 ## 2024-4-17 【普通更新】
 ### Feature
